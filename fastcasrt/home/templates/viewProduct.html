@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+	{% block body %}
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>{{product.title}}</h1>
+                        <p class="mb-4">{{product.description}}</p>
+                        <h5 class="mb-4 ">৳ {{product.price}}</h5>
+                        
+                        <!-- Black Add to Cart Button -->
+                        
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="hero-img-wrap">
+                        <img src="/media/{{product.image}}" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {%endblock%}

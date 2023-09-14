@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+	{% block body %}
+    <h1>{{blogDetails.title}}</h1>
+    
+    <div class="col-lg-7">
+        <div class="hero-img-wrap">
+            <img src="{{ blogDetails.image }}" alt="Blog Image" class="img-fluid">
+
+        </div>
+    </div>
+    <h5>Blog:</h5>
+    <p>{{blogDetails.description}}</p>
+    
+    <p><h5>by: </h5>{{blogDetails.author}}</p>
+    {%endblock%}

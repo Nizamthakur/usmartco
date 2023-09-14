@@ -1,0 +1,232 @@
+
+		{% load static %}
+		<!doctype html>
+		<html lang="en">
+			<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+				<meta name="author" content="Untree.co">
+				<link rel="shortcut icon" href="{% static 'favicon.png'%}">
+
+				<meta name="description" content="" />
+				<meta name="keywords" content="bootstrap, bootstrap4" />
+
+						<!-- Bootstrap CSS -->
+				<link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+				<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+						
+				<link href="{%static 'css/tiny-slider.css'%}" rel="stylesheet">
+				<link href="{%static 'css/style.css'%}" rel="stylesheet">
+				<title>Get your product from anywhere & anytime.</title>
+				<!-- Add these lines in the <head> section of your HTML -->
+
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+				<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+						
+					
+
+					
+					
+					
+					
+					
+			</head>
+					
+
+
+				<body>
+
+					<!-- Start Header/Navigation -->
+					<nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+						<div class="container">
+							<a class="navbar-brand" href="/home">FastCart<span>.</span></a>
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarsFurni">
+								<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+									<li class="nav-item ">
+										<a class="nav-link" href="/home">Home</a>
+									</li>
+									<li><a class="nav-link" href="/shop/shopView">Shop</a></li>
+									<li><a class="nav-link" href="/home/about">About us</a></li>
+									<li><a class="nav-link" href="/home/services">Services</a></li>
+									<li><a class="nav-link" href="/home/blog">Blog</a></li>
+									<li><a class="nav-link" href="/home/contact">Contact us</a></li>
+									<li>
+										<a id="cart" class="nav-link" href="#" data-toggle="popover" data-placement="bottom">
+											<img src="{% static 'images/cart.svg' %}">
+										</a>
+									</li>
+									
+								</ul>
+
+								{% if user.is_authenticated %}
+								<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+									
+									<li><a class="nav-link" href="/auth/logout/">Logout</a></li>
+								</ul>
+								{% else %}
+								<!-- New Login Dropdown Menu -->
+								<ul class="custom-navbar-nav navbar-nav">
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Login
+										</a>
+										<div class="dropdown-menu" aria-labelledby="loginDropdown">
+											<a class="dropdown-item" href="/auth/login/" style="color: black;">User Login</a>
+											<a class="dropdown-item" href="/admin" style="color: black;">Admin Login</a>
+											
+										</div>
+									</li>
+									
+								</ul>
+								<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+									<li><a class="nav-link" href="/auth/signup">new User?</a></li>
+								</ul>
+								
+								{% endif %}
+								
+								
+							
+							<div></div>
+							
+						</div>
+						
+					</nav>
+					
+					<!-- End Header/Navigation -->
+					{% block body %}
+
+					{% endblock %}
+					<!-- Start Footer Section -->
+					<footer class="footer-section">
+						<div class="container relative">
+						<div class="row g-5 mb-5">
+								<div class="col-lg-4">
+									<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">FastCart<span>.</span></a></div>
+									<p class="mb-4">FastCart: Your one-stop shop for top-notch desktop components, accessories, and laptops. Explore premium tech solutions and build your dream PC or elevate your computing experience with our curated selection. Unleash innovation and performance with FastCart today.</p>
+
+									<ul class="list-unstyled custom-social">
+										<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+										<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+										<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+										<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+									</ul>
+								</div>
+
+								<div class="col-lg-8">
+									<div class="row links-wrap">
+										<div class="col-6 col-sm-6 col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="/home/about">About us</a></li>
+												<li><a href="/home/services">Services</a></li>
+												<li><a href="/home/blog">Blog</a></li>
+												<li><a href="/home/contact">Contact us</a></li>
+											</ul>
+										</div>
+
+										<div class="col-6 col-sm-6 col-md-3">
+											<ul class="list-unstyled">
+												<li><a href="/home/contact">Support</a></li>
+												<li><a href="/home/blog">Knowledge base</a></li>
+												<li><a href="#">Live chat</a></li>
+											</ul>
+										</div>
+
+										
+									</div>
+								</div>
+
+							</div>
+
+							<div class="border-top copyright">
+								<div class="row pt-4">
+									<div class="col-lg-6">
+										<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.</p>
+									</div>
+
+									<div class="col-lg-6 text-center text-lg-end">
+										<ul class="list-unstyled d-inline-flex ms-auto">
+											<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+											<li><a href="#">Privacy Policy</a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</footer>
+					<!-- End Footer Section -->	
+
+
+					<script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+					<script src="{% static 'js/tiny-slider.js'%}"></script>
+					<script src="{% static 'js/custom.js'%}"></script>
+					
+				</body>
+					<script type="text/javascript">
+						$(document).ready(function () {
+							console.log("Document ready.");
+				
+							console.log("Script started.");
+							console.log("this is working");
+				
+							if (localStorage.getItem('cart') == null) {
+								var cart = {};
+							} else {
+								cart = JSON.parse(localStorage.getItem('cart'));
+							}
+				
+							$(document).on('click', '.atc', function () {
+								console.log("Add to cart clicked.");
+								console.log("clicked");
+								var item_id = this.id.toString();
+								console.log(item_id);
+				
+								if (cart[item_id] !== undefined) {
+									cart[item_id] = cart[item_id] + 1;
+									console.log(cart[item_id]);
+								} else {
+									cart[item_id] = 1;
+									console.log(cart[item_id]);
+								}
+								localStorage.setItem('cart', JSON.stringify(cart));
+								document.getElementById("cart").innerHTML = "cart(" + (Object.keys(cart).length) + ")";
+							});
+				
+							function DisplayCart(cart) {
+								console.log("DisplayCart function called.");
+								var cartString = "<h2>This is cart</h2>";
+								var cartIndex = 1;
+				
+								for (var x in cart) {
+									cartString += cartIndex;
+									cartString += document.getElementById("nm" + x).innerHTML + cart[x];
+									cartIndex += 1;
+								}
+								$('#cart').attr('content', cartString);
+							}
+				
+							$('#cart').popover({
+								title: "Cart Popover Title",
+								content: ''
+							});
+				
+							// Show the popover
+							$('#cart').popover('show');
+				
+							// Function to clear local storage
+							function clearLocalStorage() {
+								console.log("Clearing local storage...");
+								localStorage.clear();
+								console.log("Local storage cleared.");
+							}
+						});
+					</script>
+								
+			
+			
+		</html>
